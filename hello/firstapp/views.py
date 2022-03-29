@@ -4,4 +4,10 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello world! Это мой первый проект на Django!")
+    return HttpResponse("<H2>Главная</H2>")
+
+def about(request):
+    return HttpResponse("<H2>О сайте</H2>")
+
+def contact(request):
+    return HttpResponse("<H2>Контакты</H2>")
