@@ -4,7 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def index(request):
-    return HttpResponse("<H2>Главная</H2>")
+    return render(request, 'index.html')
 
 def about(request):
     return HttpResponse("<H2>О сайте</H2>")
