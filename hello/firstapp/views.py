@@ -11,6 +11,11 @@ def index(request):
     data = {"header": header, "langs": langs, "user": user, "address": addr}
     return render(request, "index.html", context=data)
 
+
+def home(request):
+    return render(request, 'firstapp/home.html')
+
+
 def about(request):
     return HttpResponse("<H2>О сайте</H2>")
 

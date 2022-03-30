@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from firstapp import views
+from django.urls import re_path
 
 urlpatterns = [
-    path('', views.index, name='home'),
-    path('^about', views.about),
-    path('^contact', views.contact),
+    path('', views.index),
+    re_path(r'^about', views.about),
+    re_path(r'^contact', views.contact),
+    path('home', views.home),
     path('admin/', admin.site.urls),
 ]

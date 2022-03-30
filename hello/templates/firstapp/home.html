@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Hello Django</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
 </head>
 <body>
     <h1>Домашняя страница Django</h1>
     <h2>templates/firstapp/home.html</h2>
+    <img src="{% static 'images/school.jpg' %}" alt="Школа 11">
 </body>
 </html>
