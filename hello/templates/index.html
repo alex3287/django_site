@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello Django</title>
-</head>
-<body>
-    <h1>{{ header }}</h1>
-    <p>Имя: {{ user.name }} Возраст: {{ user.age }}</p>
-    <p>Адрес: ул. {{ address.0 }}, д. {{ address.1 }}, кв. {{ address.2 }}</p>
-    <p>Владеет языками: {{ langs.0 }}, {{ langs.1 }}</p>
-</body>
-</html>
+{% extends "./firstapp/base.html" %}
+
+{% block title %} Index {% endblock title %}
+{% block header %} Главная страница {% endblock header %}
+{% block content %} Связка шаблонов index.html и base.html {% endblock content %}
