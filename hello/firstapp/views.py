@@ -17,7 +17,7 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse("<H2>О сайте</H2>")
+    return render(request, 'firstapp/about.html')
 
 
 def contact(request):

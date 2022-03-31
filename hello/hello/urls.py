@@ -21,7 +21,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('', views.index),
-    re_path(r'^about', TemplateView.as_view(template_name = "firstapp/about.html")),
+    re_path(r'^about', views.about),
     re_path(r'^contact', TemplateView.as_view(template_name = "firstapp/contact.html",
                                               extra_context = {"work":
                                               "Разработка программных продуктов"})),

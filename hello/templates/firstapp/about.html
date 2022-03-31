@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello Django</title>
-</head>
-<body>
-    <h1>Сведения о компании</h1>
-    <h2>Интеллетуальные программные системы</h2>
-    <h3>templates/firstapp/about.html</h3>
-</body>
-</html>
+{% extends "firstapp/base.html" %}
+{% block title %} about {% endblock title %}
+{% block header %} Сведения о компании {% endblock header %}
+{% block content %}
+    <p>Интеллетуальные программные системы</p>
+    <p>Связка шаблонов about.html и base.html</p>
+    <p>{% now "j F Y" %}</p>
+{% endblock content %}
