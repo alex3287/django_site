@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .forms import UserForm
 
 
 def index(request):
@@ -13,7 +14,10 @@ def index(request):
 
 
 def home(request):
-    return render(request, 'firstapp/home.html')
+    userform = UserForm()
+    return render(request, "firstapp/home.html",
+                  {"form": userform})
+    # return render(request, 'firstapp/home.html')
 
 
 def about(request):
