@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="{% static 'css/styles.css'%}">
 </head>
 <body>
-    <table>
-        {{ form }}
-    </table>
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Отправить">
+    </form>
 </body>
 </html>
